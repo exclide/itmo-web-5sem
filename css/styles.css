@@ -39,6 +39,25 @@ body {
     padding: 0;
 }
 
+/*Links*/
+a {
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #000000;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+
+
+
 /* header */
 .s-header {
     position: absolute;
@@ -156,7 +175,8 @@ body {
     color: silver;
 }
 
-/* header menu */
+/* header menu toggle */
+
 .header-menu-toggle {
     display: none;
     height: 42px;
@@ -236,21 +256,339 @@ body {
     transform: rotate(225deg);
 }
 
+/*
+    header responsive
+*/
 
-/*Links*/
-a {
-    color: #cf1767;
-    transition: all 0.3s ease-in-out;
+@media screen and (max-width:1200px) {
+    .header-main-nav {
+        font-size: 12px;
+    }
+
+    .header-main-nav li {
+        margin: 0 1.4rem;
+    }
+
 }
 
-a:hover,
-a:focus,
-a:active {
-    color: #000000;
+@media screen and (max-width:1000px) {
+    .s-header {
+        text-align: right;
+    }
+
+    .header-nav-wrap {
+        margin-right: 36px;
+    }
+
+    .header-nav-wrap .header-social {
+        display: none;
+    }
+
 }
 
-a:hover,
-a:active {
-    outline: 0;
+@media screen and (max-width:800px) {
+    .s-header {
+        background-color: #050505;
+        position: fixed;
+        top: 0;
+    }
+
+    .header-nav-wrap {
+        display: none;
+        text-align: left;
+        height: auto;
+        width: 100%;
+        background-color: #050505;
+        padding: 120px 44px 64px;
+    }
+
+    .header-nav-wrap .header-main-nav {
+        display: block;
+        padding-left: 0;
+        height: auto;
+        margin: 0 0 4rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header-nav-wrap .header-main-nav li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header-nav-wrap .header-main-nav li a {
+        padding: 18px 0;
+        line-height: 20px;
+    }
+
+    .header-nav-wrap .header-social {
+        display: block;
+        position: static;
+    }
+
+    .header-nav-wrap .header-social li {
+        font-size: 1.8rem;
+        margin-right: 1.6rem;
+    }
+
+    .header-nav-wrap .header-social li a {
+        line-height: 36px;
+    }
+
+    .header-menu-toggle {
+        display: block;
+    }
+
 }
 
+@media screen and (max-width:600px) {
+    .header-logo {
+        left: 30px;
+    }
+
+}
+
+
+/* ===================================================================
+ * # intro
+ *
+ * ------------------------------------------------------------------- */
+.s-intro {
+    width: 100%;
+    height: 100vh;
+    min-height: 792px;
+    background-color: #050505;
+    max-height: 800px;
+}
+
+.intro-content {
+    height: 100%;
+    max-width: 1140px;
+    padding-top: 20vh;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.intro-pic {
+    background-color: #02182c;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url(../images/godfather2.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+}
+
+.intro-pic::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: .3;
+}
+
+
+.intro-text {
+    -webkit-transform: translate3d(0, -3.6rem, 0);
+    transform: translate3d(0, -3.6rem, 0);
+    position: static;
+    z-index: 1;
+}
+
+.intro-text h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.333;
+    color: #374785;
+    margin-top: 0;
+}
+
+.intro-text h1 {
+    font-size: 7.8rem;
+    font-weight: 500;
+    line-height: 1.179;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.intro-scroll {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 8rem;
+    left: 24px;
+    z-index: 1;
+}
+
+.intro-scroll a {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    padding-right: 8.8rem;
+}
+
+.intro-scroll a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 1px;
+    width: 72px;
+    background-color: #374785;
+}
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * intro
+ * ------------------------------------------------------------------- */
+@media screen and (max-width:1400px) {
+    .intro-text h3 {
+        font-size: 2.2rem;
+    }
+
+    .intro-text h1 {
+        font-size: 7.2rem;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+    .intro-content {
+        max-width: 1000px;
+    }
+
+    .intro-text h3 {
+        font-size: 2rem;
+    }
+
+    .intro-text h1 {
+        font-size: 7rem;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .s-intro {
+        max-height: 800px;
+    }
+
+    .intro-text h1 {
+        font-size: 6.2rem;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .intro-text h1 {
+        font-size: 5rem;
+    }
+
+
+}
+
+@media screen and (max-width:800px) {
+    .intro-content {
+        width: 88%;
+        padding-top: 8rem;
+    }
+
+    .intro-pic {
+        top: 12%;
+        left: 40%;
+    }
+
+    .intro-pic::before {
+        opacity: .4;
+    }
+
+    .intro-grid {
+        top: 20%;
+        opacity: .1;
+    }
+
+    .intro-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .intro-text h1 {
+        font-size: 4.5rem;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .intro-text h1 {
+        font-size: 4rem;
+    }
+
+    .intro-pic {
+        left: 30%;
+    }
+
+    .intro-grid {
+        left: 15%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    .intro-content {
+        width: auto;
+    }
+
+    .intro-pic {
+        left: 0%;
+    }
+
+    .intro-grid {
+        left: 10%;
+    }
+
+    .intro-text {
+        -webkit-transform: translate3d(0, -4.8rem, 0);
+        transform: translate3d(0, -4.8rem, 0);
+    }
+
+    .intro-text h1 {
+        font-size: 4rem;
+    }
+
+    .intro-scroll {
+        font-size: 1.1rem;
+        left: 30px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .s-intro {
+        min-height: 656px;
+    }
+
+    .intro-text h1 {
+        font-size: 4.5rem;
+    }
+
+}
+
+@media screen and (max-width:350px) {
+    .intro-text h1 {
+        font-size: 4.2rem;
+    }
+
+}
