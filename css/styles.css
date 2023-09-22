@@ -356,10 +356,9 @@ a:active {
  * ------------------------------------------------------------------- */
 .s-intro {
     width: 100%;
-    height: 100vh;
-    min-height: 792px;
+    height: 90%;
+    min-height: 500px;
     background-color: #050505;
-    max-height: 800px;
 }
 
 .intro-content {
@@ -482,9 +481,7 @@ a:active {
 }
 
 @media screen and (max-width:1024px) {
-    .s-intro {
-        max-height: 800px;
-    }
+
 
     .intro-text h1 {
         font-size: 6.2rem;
@@ -581,14 +578,14 @@ a:active {
     }
 
     .intro-text h1 {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 
 }
 
 @media screen and (max-width:350px) {
     .intro-text h1 {
-        font-size: 4.2rem;
+        font-size: 3.5rem;
     }
 
 }
