@@ -585,29 +585,6 @@ a:active {
 
 }
 
-/*
-about
- */
-
-.s-about {
-    background-color: #ffffff;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-}
-
-.about-content {
-    max-width: 1140px;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-
-}
-
-.table-responsive {
-    width: 100%;
-}
-
 /* -------------------------------------------------------------------
  * ## tables
  * ------------------------------------------------------------------- */
@@ -645,4 +622,27 @@ td:last-child {
 .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+}
+
+/*
+about
+ */
+
+.s-about {
+    background-color: #ffffff;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.about-content {
+    max-width: 1140px;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.table-responsive {
+    width: 100%;
 }
