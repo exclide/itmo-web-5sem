@@ -11,18 +11,6 @@
 
 /* base style */
 
-html {
-    font-size: 10px;
-}
-
-@media screen and (max-width:400px) {
-    html {
-        font-size: 9.411764705882353px;
-    }
-
-}
-
-
 html,
 body {
     height: 100%;
@@ -55,8 +43,6 @@ a:hover,
 a:active {
     outline: 0;
 }
-
-
 
 
 /* header */
@@ -392,7 +378,6 @@ a:active {
 
 
 .intro-text {
-    -webkit-transform: translate3d(0, -3.6rem, 0);
     transform: translate3d(0, -3.6rem, 0);
     position: static;
     z-index: 1;
