@@ -3,11 +3,11 @@
 
 /* show blocks */
 
-/*
+
 *:hover {
     outline:1px blue solid;
 }
-*/
+
 
 /* base style */
 
@@ -606,7 +606,6 @@ td:last-child {
 
 .table-responsive {
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 /*
@@ -621,8 +620,6 @@ about
 
 .about-content {
     max-width: 1140px;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     position: relative;
 
@@ -650,8 +647,6 @@ services
 
 .services-content {
     max-width: 1140px;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     position: relative;
 }
@@ -673,5 +668,50 @@ services
 @media screen and (max-width:800px) {
     .services-text h1 {
         font-size: 4rem;
+    }
+}
+
+.s-works {
+    background-color: #050505;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+}
+
+.works-content {
+    max-width: 1140px;
+    align-items: center;
+    position: relative;
+}
+
+.works-content h2 {
+    font-size: 6rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.works-content p {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+@media screen and (max-width:1024px) {
+    .works-content h2 {
+        font-size: 5rem;
+    }
+
+    .works-content p {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .works-content h2 {
+        font-size: 4rem;
+    }
+
+    .works-content p {
+        font-size: 1.3rem;
     }
 }
