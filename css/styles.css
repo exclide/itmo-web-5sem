@@ -200,7 +200,6 @@ a:active {
     margin-top: -1px;
     background-color: #ffffff;
     transition: all .5s;
-    font: 0/0 a;
     text-shadow: none;
     color: transparent;
     position: absolute;
@@ -646,4 +645,48 @@ about
 
 .table-responsive {
     width: 100%;
+}
+
+@media screen and (max-width:800px) {
+    .table-responsive {
+        font-size: 1.2rem;
+    }
+}
+
+/*
+services
+ */
+
+.s-services {
+    background-color: #050505;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+}
+
+.services-content {
+    max-width: 1140px;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.services-text h1 {
+    font-size: 7rem;
+    font-weight: 500;
+    line-height: 0.5;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+@media screen and (max-width:1024px) {
+    .services-text h1 {
+        font-size: 5.5rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .services-text h1 {
+        font-size: 4rem;
+    }
 }
