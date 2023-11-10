@@ -2,4 +2,4 @@
 
 Resume page
 
-https://exclide.github.io/itmo-web-5sem/
+https://xcvtt.github.io/itmo-web-5sem/
