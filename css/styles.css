@@ -730,3 +730,19 @@ services
         font-size: 1.3rem;
     }
 }
+
+.imageContainer {
+    width:100vw;
+    height:100vh;
+    background-image: url(../images/sayhello.png);
+}
+
+.imageContainer h1 {
+    font-size: 7rem;
+    color: white;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
