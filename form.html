@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список предметов и дедлайнов</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+<div class="container">
+    <h1>Список предметов и дедлайнов</h1>
+
+    <form id="deadlineForm">
+        <label for="subject">Название предмета:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="deadline">Дедлайн:</label>
+        <input type="date" id="deadline" name="deadline" required>
+
+        <button type="submit">Добавить в список</button>
+    </form>
+
+    <div id="deadlineList"></div>
+</div>
+
+<script src="js/form.js"></script>
+</body>
+</html>
