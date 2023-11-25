@@ -2,16 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Say Hello</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список предметов и дедлайнов</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/styles.css">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/form.js"></script>
     <script src="js/speed.js" defer></script>
     <script src="js/active.js" defer></script>
 </head>
@@ -44,10 +40,23 @@
 
 </header>
 
-<div class="imageContainer">
-    <h1>
-        SAY HELLO TO MY LITTLE FRIEND
-    </h1>
+<div class="container">
+    <h1>Список предметов и дедлайнов</h1>
+
+    <form id="deadlineForm">
+        <label for="subject">Название предмета:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="deadline">Дедлайн:</label>
+        <input type="date" id="deadline" name="deadline" required>
+
+        <button type="submit">Добавить в список</button>
+    </form>
+
+    <div id="deadlineList"></div>
 </div>
+
 </body>
 </html>
+
+<!-- -->
