@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Список предметов и дедлайнов</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/form.css">
-    <script src="js/form.js"></script>
-    <script src="js/speed.js" defer></script>
-    <script src="js/active.js" defer></script>
+    <link rel="stylesheet" href="css/modal.css">
+    <title>Authentication Modal</title>
 </head>
-<body>
 
 <header class="s-header">
 
@@ -40,23 +38,12 @@
 
 </header>
 
-<div class="container">
-    <h1>Список предметов и дедлайнов</h1>
+<body>
+<button id="openAuthModalBtn">Open Authentication Modal</button>
 
-    <form id="deadlineForm">
-        <label for="subject">Название предмета:</label>
-        <input type="text" id="subject" name="subject" required>
-
-        <label for="deadline">Дедлайн:</label>
-        <input type="date" id="deadline" name="deadline" required>
-
-        <button type="submit">Добавить в список</button>
-    </form>
-
-    <div id="deadlineList"></div>
-</div>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="js/modal.js"></script>
 </body>
 </html>
-
-<!-- -->
