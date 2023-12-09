@@ -1,31 +1,35 @@
 $(document).ready(function(){
-    // Обработчик клика по кнопке "Open Authentication Modal"
-    $('#openAuthModalBtn').click(function() {
-        // Открываем модальное окно аутентификации с использованием SweetAlert2
-        Swal.fire({
-            title: 'Authentication', // Заголовок модального окна
-            html:
-                '<input type="text" id="username" class="swal2-input" placeholder="Username">' +
-                '<input type="password" id="password" class="swal2-input" placeholder="Password">',
-            showCancelButton: true, // Показываем кнопку отмены
-            confirmButtonText: 'Login', // Текст кнопки подтверждения
-            cancelButtonText: 'Cancel' // Текст кнопки отмены
-        }).then((result) => {
-            if (result.isConfirmed) {
-                // Ваша логика аутентификации
+    $('#loginForm').submit(function(event) {
+        event.preventDefault();
 
-                // Получаем значения полей ввода
-                const username = $('#username').val();
-                const password = $('#password').val();
+        const username = $('#username').val();
+        const password = $('#password').val();
+        // Пароль не проверяется, т.к. в jsonplaceholder ручке его нет
 
-                // Предположим, что ваша логика валидации проста и вы используете условие
-                if (username === 'asd' && password === 'asd') {
-                    // При успешной аутентификации
-                    toastr.success('Authentication Successful!', 'OK');
+        $.ajax({
+            url: `https://jsonplaceholder.typicode.com/users?username=${username}`,
+            method: 'GET',
+            success: function(users) {
+                if (users.length > 0) {
+                    // В случае, если пользователь существует, моделируем успешный логин
+                    const user = users[0];
+                    $('#authContainer').hide();
+                    $('#userInfo').show();
+                    $('#loggedInUsername').text(user.name);
                 } else {
-                    // При неуспешной аутентификации
-                    toastr.error('Authentication Failed!', 'FAIL');
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Authentication Failed',
+                        text: 'User not found'
+                    });
                 }
+            },
+            error: function() {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred while processing your request.'
+                });
             }
         });
     });
