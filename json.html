@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Список предметов и дедлайнов</title>
+    <title>Forum</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/form.css">
-    <script src="js/form.js"></script>
-    <script src="js/speed.js" defer></script>
+    <link rel="stylesheet" href="css/json.css">
+
     <script src="js/active.js" defer></script>
 </head>
 <body>
@@ -40,23 +39,12 @@
 
 </header>
 
-<div class="container">
-    <h1>Список предметов и дедлайнов</h1>
-
-    <form id="deadlineForm">
-        <label for="subject">Название предмета:</label>
-        <input type="text" id="subject" name="subject" required>
-
-        <label for="deadline">Дедлайн:</label>
-        <input type="date" id="deadline" name="deadline" required>
-
-        <button type="submit">Добавить в список</button>
-    </form>
-
-    <div id="deadlineList"></div>
+<div id="forum-container">
+    <button id="load-posts-btn">Load Posts</button>
+    <div id="posts-container"></div>
+    <div id="preloader"></div>
 </div>
 
+<script src="js/script.js"></script>
 </body>
 </html>
-
-<!-- -->
